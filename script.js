@@ -1,30 +1,177 @@
+const WHATSAPP_NUMBER = '254736671873';
+
+const whatsappIconSVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
+
 const products = [
-    { id: 1, name: "Wa-Jose Pro Max", description: "Flagship smartwatch with titanium case and sapphire crystal", price: "KES 2,850", badge: "Best Seller", image: "images/product-1.jpeg" },
-    { id: 2, name: "Wa-Jose Elite", description: "Premium fitness tracker with advanced health monitoring", price: "KES 2,200", badge: "New", image: "images/product-2.jpeg" },
-    { id: 3, name: "Wa-Jose Ultra", description: "Rugged outdoor smartwatch with 30-day battery", price: "KES 2,650", badge: "Popular", image: "images/product-3.jpeg" },
-    { id: 4, name: "Wa-Jose Lite", description: "Lightweight everyday smartwatch with essential features", price: "KES 1,200", badge: "", image: "images/product-4.jpeg" },
-    { id: 5, name: "Wa-Jose Sport", description: "Sports-focused wearable with GPS and HR monitoring", price: "KES 1,650", badge: "Sale", image: "images/product-5.jpeg" },
-    { id: 6, name: "Wa-Jose Classic", description: "Timeless design meets modern technology", price: "KES 1,950", badge: "", image: "images/product-6.jpeg" },
-    { id: 7, name: "Wa-Jose Mini", description: "Compact smartwatch for smaller wrists", price: "KES 1,350", badge: "New", image: "images/product-7.jpeg" },
-    { id: 8, name: "Wa-Jose Hybrid", description: "Analog-digital hybrid with smart features", price: "KES 1,800", badge: "", image: "images/product-8.jpeg" },
-    { id: 9, name: "Wa-Jose Kids", description: "Safe and fun smartwatch for children", price: "KES 950", badge: "", image: "images/product-9.jpeg" },
-    { id: 10, name: "Wa-Jose Solar", description: "Solar-powered smartwatch with unlimited battery", price: "KES 2,400", badge: "Eco", image: "images/product-10.jpeg" },
-    { id: 11, name: "Wa-Jose Dive", description: "Professional dive computer and smartwatch", price: "KES 2,750", badge: "Pro", image: "images/product-11.jpeg" },
-    { id: 12, name: "Wa-Jose Golf", description: "Golf-specific smartwatch with course maps", price: "KES 2,100", badge: "", image: "images/product-12.jpeg" },
-    { id: 13, name: "Wa-Jose Trek", description: "Adventure smartwatch with topographic maps", price: "KES 2,300", badge: "New", image: "images/product-13.jpeg" },
-    { id: 14, name: "Wa-Jose Pulse", description: "Health-focused tracker with ECG and SpO2", price: "KES 1,750", badge: "", image: "images/product-14.jpeg" },
-    { id: 15, name: "Wa-Jose Air", description: "Ultra-light titanium smartwatch at 28g", price: "KES 2,050", badge: "Lightweight", image: "images/product-15.jpeg" },
-    { id: 16, name: "Wa-Jose Steel", description: "Surgical-grade stainless steel with ceramic bezel", price: "KES 2,500", badge: "", image: "images/product-16.jpeg" },
-    { id: 17, name: "Wa-Jose Fit", description: "Fitness band with 14-day battery life", price: "KES 750", badge: "Bestseller", image: "images/product-17.jpeg" },
-    { id: 18, name: "Wa-Jose Pro", description: "Professional multisport GPS watch", price: "KES 2,700", badge: "Pro", image: "images/product-18.jpeg" },
-    { id: 19, name: "Wa-Jose Wave", description: "Swim-proof tracker with stroke detection", price: "KES 1,250", badge: "", image: "images/product-19.jpeg" },
-    { id: 20, name: "Wa-Jose Zen", description: "Mindfulness-focused wearable with stress tracking", price: "KES 1,450", badge: "Wellness", image: "images/product-20.jpeg" }
+    {
+        id: 1,
+        name: "Airforce Shoes",
+        description: "Classic Airforce sneakers, comfortable and durable for everyday wear",
+        price: "KES 2,500",
+        badge: "Popular",
+        image: "images/product-1.jpeg"
+    },
+    {
+        id: 2,
+        name: "Adidas Shoes",
+        description: "Premium Adidas sneakers with iconic three-stripe design",
+        price: "KES 2,500",
+        badge: "Trending",
+        image: "images/product-2.jpeg"
+    },
+    {
+        id: 3,
+        name: "Brown Leather Jacket",
+        description: "Genuine brown leather jacket, stylish and rugged",
+        price: "KES 1,500",
+        badge: "Premium",
+        image: "images/product-3.jpeg"
+    },
+    {
+        id: 4,
+        name: "Simple Leather Jacket",
+        description: "Sleek minimalist leather jacket for a clean look",
+        price: "KES 1,500",
+        badge: "",
+        image: "images/product-4.jpeg"
+    },
+    {
+        id: 5,
+        name: "Elite Performance Jersey",
+        description: "High-performance sports jersey, breathable and lightweight",
+        price: "KES 300",
+        badge: "",
+        image: "images/product-5.jpeg"
+    },
+    {
+        id: 6,
+        name: "Champion Team Jersey",
+        description: "Champion-style team jersey, bold design and great fit",
+        price: "KES 300",
+        badge: "",
+        image: "images/product-6.jpeg"
+    },
+    {
+        id: 7,
+        name: "Cycling Team Jersey",
+        description: "Aerodynamic cycling jersey with moisture-wicking fabric",
+        price: "KES 300",
+        badge: "",
+        image: "images/product-7.jpeg"
+    },
+    {
+        id: 8,
+        name: "Soccer Pro Jersey",
+        description: "Professional soccer jersey, durable and comfortable on the field",
+        price: "KES 300",
+        badge: "",
+        image: "images/product-8.jpeg"
+    },
+    {
+        id: 9,
+        name: "Compression Leggings",
+        description: "High-quality compression leggings for sports and training",
+        price: "KES 1,200",
+        badge: "",
+        image: "images/product-9.jpeg"
+    },
+    {
+        id: 10,
+        name: "Nike Air Max",
+        description: "Iconic Nike Air Max with visible air cushioning",
+        price: "KES 2,500",
+        badge: "Best Seller",
+        image: "images/product-10.jpeg"
+    },
+    {
+        id: 11,
+        name: "Puma Sneakers",
+        description: "Sporty Puma sneakers, lightweight and comfortable",
+        price: "KES 2,500",
+        badge: "",
+        image: "images/product-11.jpeg"
+    },
+    {
+        id: 12,
+        name: "Running Shoes",
+        description: "Performance running shoes with responsive cushioning",
+        price: "KES 2,500",
+        badge: "New",
+        image: "images/product-12.jpeg"
+    },
+    {
+        id: 13,
+        name: "Formal Leather Shoes",
+        description: "Elegant formal leather shoes for office and events",
+        price: "KES 1,800",
+        badge: "",
+        image: "images/product-13.jpeg"
+    },
+    {
+        id: 14,
+        name: "Training Shoes",
+        description: "Versatile training shoes for gym and outdoor workouts",
+        price: "KES 2,500",
+        badge: "",
+        image: "images/product-14.jpeg"
+    },
+    {
+        id: 15,
+        name: "Canvas Sneakers",
+        description: "Casual canvas sneakers, perfect for everyday outings",
+        price: "KES 1,000",
+        badge: "Budget",
+        image: "images/product-15.jpeg"
+    },
+    {
+        id: 16,
+        name: "Baseball Jacket",
+        description: "Classic baseball-style jacket with ribbed cuffs",
+        price: "KES 1,500",
+        badge: "",
+        image: "images/product-16.jpeg"
+    },
+    {
+        id: 17,
+        name: "Track Pants",
+        description: "Comfortable track pants with zip pockets",
+        price: "KES 1,200",
+        badge: "",
+        image: "images/product-17.jpeg"
+    },
+    {
+        id: 18,
+        name: "Sports Hoodie",
+        description: "Warm sports hoodie with kangaroo pocket",
+        price: "KES 1,000",
+        badge: "Cozy",
+        image: "images/product-18.jpeg"
+    },
+    {
+        id: 19,
+        name: "Training Shorts",
+        description: "Lightweight training shorts with built-in liner",
+        price: "KES 800",
+        badge: "",
+        image: "images/product-19.jpeg"
+    },
+    {
+        id: 20,
+        name: "Soccer Cleats",
+        description: "Professional soccer cleats with superior grip",
+        price: "KES 2,500",
+        badge: "Pro",
+        image: "images/product-20.jpeg"
+    }
 ];
 
 let displayedProducts = 8;
 const productsPerLoad = 4;
 
 function createProductCard(product) {
+    const waMessage = encodeURIComponent(`Hi! I'm interested in the ${product.name} (${product.price}). Is it available?`);
+    const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${waMessage}`;
+
     return `
         <article class="product-card" style="animation-delay: ${Math.random() * 0.3}s">
             <div class="product-image">
@@ -36,13 +183,11 @@ function createProductCard(product) {
                 <p class="product-description">${product.description}</p>
                 <div class="product-footer">
                     <span class="product-price">${product.price}</span>
-                    <a href="#" class="product-link">
-                        View Details
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </a>
                 </div>
+                <a href="${waLink}" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                    ${whatsappIconSVG}
+                    Order on WhatsApp
+                </a>
             </div>
         </article>
     `;

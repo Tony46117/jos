@@ -820,9 +820,6 @@ button {
 .floating-whatsapp,
 .floating-call {
     position: fixed;
-    width: 56px;
-    height: 56px;
-    border-radius: var(--border-radius-full);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -830,6 +827,7 @@ button {
     z-index: var(--z-fixed);
     transition: all var(--transition-base);
     text-decoration: none;
+    padding: var(--spacing-2);
 }
 
 .floating-whatsapp {
@@ -837,16 +835,19 @@ button {
     right: var(--spacing-6);
     background: #25d366;
     color: var(--color-white);
+    border-radius: var(--border-radius-lg);
 }
 
 .floating-whatsapp:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+    transform: scale(1.15);
+    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+    background: #1ebe5d;
 }
 
 .floating-whatsapp svg {
-    width: 28px;
-    height: 28px;
+    width: 48px;
+    height: 48px;
+    display: block;
 }
 
 .floating-call {
@@ -855,17 +856,19 @@ button {
     background: var(--color-accent);
     color: var(--color-white);
     border: 3px solid var(--color-white);
+    border-radius: var(--border-radius-lg);
 }
 
 .floating-call:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 30px rgba(233, 69, 96, 0.4);
+    transform: scale(1.15);
+    box-shadow: 0 12px 40px rgba(233, 69, 96, 0.5);
     background: var(--color-accent-hover);
 }
 
 .floating-call svg {
-    width: 26px;
-    height: 26px;
+    width: 48px;
+    height: 48px;
+    display: block;
 }
 
 .whatsapp-tooltip,
@@ -998,8 +1001,7 @@ button {
 
     .floating-whatsapp,
     .floating-call {
-        width: 48px;
-        height: 48px;
+        padding: var(--spacing-1);
     }
 
     .floating-whatsapp {
@@ -1010,6 +1012,16 @@ button {
     .floating-call {
         bottom: var(--spacing-4);
         left: var(--spacing-4);
+    }
+
+    .floating-whatsapp svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .floating-call svg {
+        width: 40px;
+        height: 40px;
     }
 
     .whatsapp-tooltip,
@@ -1067,18 +1079,17 @@ button {
 
     .floating-whatsapp,
     .floating-call {
-        width: 44px;
-        height: 44px;
+        padding: var(--spacing-1);
     }
 
     .floating-whatsapp svg {
-        width: 24px;
-        height: 24px;
+        width: 36px;
+        height: 36px;
     }
 
     .floating-call svg {
-        width: 22px;
-        height: 22px;
+        width: 36px;
+        height: 36px;
     }
 }
 
